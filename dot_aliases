@@ -1,0 +1,5 @@
+alias bat="batcat"
+alias ls="eza --icons --group-directories-first --git --hyperlink"
+
+alias activate="source .venv/bin/activate"
+alias please="sudo"

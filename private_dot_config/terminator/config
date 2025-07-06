@@ -1,0 +1,64 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    font = MesloLGS NF 10
+    scrollback_infinite = True
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 66:32
+      maximised = True
+      fullscreen = False
+      size = 1854, 1011
+      title = /usr/bin/zsh
+      last_active_term = c8fad2bf-487a-4fcf-8dc8-2efcb29cebb8
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 503
+      ratio = 0.5
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+      order = 0
+      position = 924
+      ratio = 0.49972958355868036
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = c8fad2bf-487a-4fcf-8dc8-2efcb29cebb8
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = 3360bf67-2013-4b8f-87f8-7e69bb80a5cc
+    [[[child5]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 924
+      ratio = 0.49972958355868036
+    [[[terminal6]]]
+      type = Terminal
+      parent = child5
+      order = 0
+      profile = default
+      uuid = 6e30b365-3d5f-41b3-a19b-ed03d64fa990
+    [[[terminal7]]]
+      type = Terminal
+      parent = child5
+      order = 1
+      profile = default
+      uuid = 710f85cd-1c1e-48f2-be4e-b9ee2727540b
+[plugins]

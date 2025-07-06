@@ -1,2 +1,54 @@
+#!/bin/zsh
 
-. "$HOME/.local/bin/env"
+# PROFILING -------------------------------------------------------------------
+# zmodload zsh/zprof
+
+# PATH ------------------------------------------------------------------------
+typeset -U path
+export PATH="$HOME/.local/bin:$PATH"
+
+# INSTANT PROMPT --------------------------------------------------------------
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# ANTIDOTE --------------------------------------------------------------------
+ANTIDOTE_HOME="$HOME/.antidote"
+PLUGINS_FILE="$HOME/.zsh_plugins.txt"
+STATIC_FILE="$HOME/.zsh_plugins.zsh"
+
+if [[ ! -d "$ANTIDOTE_HOME" ]]; then
+    git clone --depth=1 https://github.com/mattmc3/antidote.git "$ANTIDOTE_HOME"
+fi
+
+if [[ ! -f "$STATIC_FILE" || "$PLUGINS_FILE" -nt "$STATIC_FILE" ]]; then
+    echo "Updating plugin cache..."
+    source "$ANTIDOTE_HOME/antidote.zsh"
+    antidote bundle < "$PLUGINS_FILE" > "$STATIC_FILE"
+fi
+
+source "$STATIC_FILE"
+
+# ALIASES ---------------------------------------------------------------------
+source ~/.aliases
+
+# SETTINGS --------------------------------------------------------------------
+export SHELL=$(which zsh)
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY          # Share history between all sessions
+
+# PROMPT ----------------------------------------------------------------------
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# PROFILING -------------------------------------------------------------------
+# zprof
