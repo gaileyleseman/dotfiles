@@ -1,0 +1,8 @@
+# List directory contents after changing into it
+chpwd() {
+  ls
+}
+
+kns() {
+  kubectl config set-context --current --namespace="$1"
+}
