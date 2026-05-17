@@ -1,15 +1,23 @@
 # Dotfiles with chezmoi
 
-## Install & Apply
+## Install Chezmoi
 
+
+##  Apply
+
+**Option A: Quick Install (HTTPS)**
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gaileyleseman
+chsh -s $(which zsh)
+```
 
+**Option B: Full Access (SSH)**
+```bash
+chezmoi init --apply git@github.com:gaileyleseman/dotfiles.git
 chsh -s $(which zsh)
 ```
 
 ## Daily Usage
-
 ```bash
 chezmoi edit ~/.zshrc    # Edit a file
 chezmoi diff             # Preview changes

@@ -12,11 +12,13 @@ sudo apt install -y \
     bat \
     jq \
     rsync \
+    terminator \
     tmux \
-    fzf \
-    ripgrep \
-    fd-find \
     eza \
+    fzf \
+    fd-find \
+    kubectx \
+    ripgrep \
     zstd
 
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh

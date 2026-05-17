@@ -7,15 +7,15 @@ zsh-users/zsh-completions
 
 ohmyzsh/ohmyzsh path:plugins/git
 ohmyzsh/ohmyzsh path:plugins/git-auto-fetch kind:defer
-ohmyzsh/ohmyzsh path:plugins/extract
 
+ohmyzsh/ohmyzsh path:plugins/sudo
 ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/zsh-interactive-cd
-ohmyzsh/ohmyzsh path:plugins/command-not-found
-iffse/pay-respects
 ajeetdsouza/zoxide
+iffse/pay-respects
 
-ohmyzsh/ohmyzsh path:plugins/gh
+ohmyzsh/ohmyzsh path:plugins/extract
+
 ohmyzsh/ohmyzsh path:plugins/uv
 
 ohmyzsh/ohmyzsh path:plugins/docker
@@ -24,13 +24,12 @@ ohmyzsh/ohmyzsh path:plugins/kubectl
 ohmyzsh/ohmyzsh path:plugins/helm
 ohmyzsh/ohmyzsh path:plugins/minikube
 
+ohmyzsh/ohmyzsh path:plugins/gh
 ohmyzsh/ohmyzsh path:plugins/tailscale
+ohmyzsh/ohmyzsh path:plugins/hcloud
 ohmyzsh/ohmyzsh path:plugins/chezmoi
 
-ohmyzsh/ohmyzsh path:plugins/jira
-ohmyzsh/ohmyzsh path:plugins/web-search
-
-Aloxaf/fzf-tab
+ocodo/ollama_zsh_completion
 
 romkatv/powerlevel10k kind:fpath
 

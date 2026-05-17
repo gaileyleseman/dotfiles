@@ -32,8 +32,9 @@ fi
 
 source "$STATIC_FILE"
 
-# ALIASES ---------------------------------------------------------------------
+# ALIASES AND FUNCTIONS -------------------------------------------------------
 source ~/.aliases
+source ~/.functions
 
 # SETTINGS --------------------------------------------------------------------
 export SHELL=$(which zsh)
